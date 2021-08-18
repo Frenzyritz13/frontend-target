@@ -1,53 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-import Loginscreen from './pages/Loginscreen'
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import AppointmentApp from "./components/AppointmentApp.js";
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+import "./App.css";
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <MuiThemeProvider>
+          <AppointmentApp />
+        </MuiThemeProvider>
+      </div>
+    );
+  }
+}
 
-// export default App;
-
-// class App extends Component {
-//   constructor(props){
-//     super(props);
-//     this.state={
-//       loginPage:[],
-//       // uploadScreen:[]
-//     }
-//   }
-//   componentWillMount(){
-//     var loginPage =[];
-//     loginPage.push(<LoginScreen appContext={this} key={"login-screen"}/>);
-//     this.setState({
-//                   loginPage:loginPage
-//                     })
-//   }
-//   render() {
-//     return (
-//       <div className="App">
-//         {this.state.loginPage}
-//         {/* {this.state.uploadScreen} */}
-//       </div>
-//     );
-//   }
-// }
-
-// export default App;
+export default App;
